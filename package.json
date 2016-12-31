@@ -1,0 +1,21 @@
+{
+  "name": "@withinrafael/debug-test-01",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "Rafael Rivera",
+    "url": "https://twitter.com/WithinRafael"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "frida-compile": "^3.0.0"
+    },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "frida-compile src/app.js -o app.js",
+    "build-absolute": "frida-compile src/app.js -a -o app.js",
+    "watch": "frida-compile src/app.js -o app.js -w",
+    "watch-absolute": "frida-compile src/app.js -a -o app.js -w"
+  }
+}
